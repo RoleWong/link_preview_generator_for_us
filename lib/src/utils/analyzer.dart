@@ -1,5 +1,5 @@
-import 'package:link_preview_generator/src/models/types.dart';
-import 'package:link_preview_generator/src/utils/scrapper.dart';
+import 'package:link_preview_generator_for_us/src/models/types.dart';
+import 'package:link_preview_generator_for_us/src/utils/scrapper.dart';
 
 /// Link Preview Analyzer
 class LinkPreviewAnalyzer {
@@ -17,7 +17,7 @@ class LinkPreviewAnalyzer {
     var info = getInfoFromCache(url);
     if (info != null) return info;
     try {
-      info = await LinkPreview.scrapeFromURL(url);
+      info = await LinkPreviewForUs.scrapeFromURL(url);
 
       info.timeout = DateTime.now().add(cacheDuration);
       _map[url] = info;

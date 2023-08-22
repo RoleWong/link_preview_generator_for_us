@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
-import 'package:link_preview_generator/src/models/types.dart';
-import 'package:link_preview_generator/src/utils/analyzer.dart';
-import 'package:link_preview_generator/src/utils/scrapper.dart';
+import 'package:link_preview_generator_for_us/src/models/types.dart';
+import 'package:link_preview_generator_for_us/src/utils/analyzer.dart';
+import 'package:link_preview_generator_for_us/src/utils/scrapper.dart';
 import 'package:universal_html/html.dart';
 
 class AmazonScrapper {

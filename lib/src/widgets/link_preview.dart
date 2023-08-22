@@ -1,14 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:link_preview_generator/src/models/types.dart';
-import 'package:link_preview_generator/src/utils/analyzer.dart';
-import 'package:link_preview_generator/src/widgets/link_view_large.dart';
-import 'package:link_preview_generator/src/widgets/link_view_small.dart';
+import 'package:link_preview_generator_for_us/src/models/types.dart';
+import 'package:link_preview_generator_for_us/src/utils/analyzer.dart';
+import 'package:link_preview_generator_for_us/src/widgets/link_view_large.dart';
+import 'package:link_preview_generator_for_us/src/widgets/link_view_small.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// A widget to convert your links into beautiful previews.
-class LinkPreviewGenerator extends StatefulWidget {
+class LinkPreviewGeneratorForUs extends StatefulWidget {
   /// Customize the background colour.
   /// Deaults to `Color.fromRGBO(248, 248, 248, 1.0)`.
   final Color backgroundColor;
@@ -46,7 +46,7 @@ class LinkPreviewGenerator extends StatefulWidget {
   /// Image URL that will be shown if parsing fails
   /// & when multimedia enabled & no meta data is available.
   /// Deaults to `A crying semi-soccer ball image`.
-  /// https://raw.githubusercontent.com/ghpranav/link_preview_generator/main/assets/giphy.gif
+  /// https://raw.githubusercontent.com/ghpranav/link_preview_generator_for_us/main/assets/giphy.gif
   final String errorImage;
 
   /// Title that need to be shown if parsing fails.
@@ -105,8 +105,8 @@ class LinkPreviewGenerator extends StatefulWidget {
   /// Pass empty function to disable tap.
   final void Function()? onTap;
 
-  /// Creates [LinkPreviewGenerator]
-  const LinkPreviewGenerator({
+  /// Creates [LinkPreviewGeneratorForUs]
+  const LinkPreviewGeneratorForUs({
     Key? key,
     required this.link,
     this.cacheDuration = const Duration(days: 7),
@@ -127,7 +127,7 @@ class LinkPreviewGenerator extends StatefulWidget {
     this.errorWidget,
     this.errorBody = 'Oops! Unable to parse the url.',
     this.errorImage =
-        'https://raw.githubusercontent.com/ghpranav/link_preview_generator/main/assets/giphy.gif',
+        'https://raw.githubusercontent.com/ghpranav/link_preview_generator_for_us/main/assets/giphy.gif',
     this.errorTitle = 'Something went wrong!',
     this.borderRadius = 12.0,
     this.boxShadow,
@@ -135,10 +135,10 @@ class LinkPreviewGenerator extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _LinkPreviewGeneratorState createState() => _LinkPreviewGeneratorState();
+  _LinkPreviewGeneratorForUsState createState() => _LinkPreviewGeneratorForUsState();
 }
 
-class _LinkPreviewGeneratorState extends State<LinkPreviewGenerator> {
+class _LinkPreviewGeneratorForUsState extends State<LinkPreviewGeneratorForUs> {
   WebInfo? _info;
   bool _loading = false;
   late String _url;

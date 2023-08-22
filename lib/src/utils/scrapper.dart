@@ -2,22 +2,22 @@ import 'dart:async';
 
 import 'package:collection/collection.dart';
 import 'package:http/http.dart' as http;
-import 'package:link_preview_generator/src/models/types.dart';
-import 'package:link_preview_generator/src/rules/amazon.scrapper.dart';
-import 'package:link_preview_generator/src/rules/default.scrapper.dart';
-import 'package:link_preview_generator/src/rules/image.scrapper.dart';
-import 'package:link_preview_generator/src/rules/instagram.scrapper.dart';
-import 'package:link_preview_generator/src/rules/twitter.scrapper.dart';
-import 'package:link_preview_generator/src/rules/video.scrapper.dart';
-import 'package:link_preview_generator/src/rules/youtube.scrapper.dart';
-import 'package:link_preview_generator/src/utils/analyzer.dart';
-import 'package:link_preview_generator/src/utils/canonical_url.dart';
+import 'package:link_preview_generator_for_us/src/models/types.dart';
+import 'package:link_preview_generator_for_us/src/rules/amazon.scrapper.dart';
+import 'package:link_preview_generator_for_us/src/rules/default.scrapper.dart';
+import 'package:link_preview_generator_for_us/src/rules/image.scrapper.dart';
+import 'package:link_preview_generator_for_us/src/rules/instagram.scrapper.dart';
+import 'package:link_preview_generator_for_us/src/rules/twitter.scrapper.dart';
+import 'package:link_preview_generator_for_us/src/rules/video.scrapper.dart';
+import 'package:link_preview_generator_for_us/src/rules/youtube.scrapper.dart';
+import 'package:link_preview_generator_for_us/src/utils/analyzer.dart';
+import 'package:link_preview_generator_for_us/src/utils/canonical_url.dart';
 import 'package:universal_html/html.dart';
 import 'package:universal_html/parsing.dart';
 
 /// Generate data required for a link preview.
 /// Wrapper object for the link preview generator.
-class LinkPreview {
+class LinkPreviewForUs {
   /// User agent user for making GET request to given URL.
   /// Uses `WhatsApp v2.21.12.21` user agent.
   static const _userAgent = 'WhatsApp/2.21.12.21 A';
